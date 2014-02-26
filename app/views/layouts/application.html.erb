@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Game On" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Game On" %>">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+       <%= render 'layouts/footer' %>
+    </main>
   </body>
 </html>
