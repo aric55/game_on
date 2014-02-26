@@ -1,9 +1,11 @@
 GameOn::Application.routes.draw do
-  get "static_pages/servers"
-  get "static_pages/home"
-  get "static_pages/events"
-  get "static_pages/staff"
-  get "static_pages/sponsors"
+  root 'static_pages#home'
+  get "users/new"
+  match '/signup',     to: 'users#new',               via: 'get'
+  match '/servers',    to: 'static_pages#servers',    via: 'get'
+  match '/events',     to: 'static_pages#events',     via: 'get'
+  match '/staff',      to: 'static_pages#staff',      via: 'get'
+  match '/sponsors',   to: 'static_pages#sponsors',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
