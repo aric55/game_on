@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def servers
   end
+
+  def sponsors
+  end
 end
