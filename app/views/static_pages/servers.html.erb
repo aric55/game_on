@@ -1,5 +1,106 @@
 <% provide(:title, 'Servers') %>
-<h1>GameOn LAN Party</h1>
-<p>
-  Servers Page for the GameOn LAN Party App
-</p>
+<h1>Servers</h1>
+<div class="row">
+	<div class="col-xs-6 col-md-3">
+	  <%= link_to image_tag("cs-go-logo.jpg", alt: "CS:GO", class: "thumbnail"), '#' %>
+	  <div class="caption">
+	  	<h3>Counter-Strike: GO</h3>
+	  	<p>IP ADDRESS: 192.168.1.241:27015</p>
+	  		<ul class="list-unstyled">
+	  			<li>Launch Counter-Strike</li>
+	  			<li>Enable the console</li>
+	  			  <ul>
+	  			  	<li>click options, scroll near the bottom and find 'Enable Developer Console (~)' and set this to YES. click back</li>
+	  			  </ul>
+	  			<li>Press the ~ key and open the console</li>
+	  			<li>type: connect 192.168.1.241:27015 and hit enter.<li>
+	  		</ul>
+	  		Second Option:
+	  		<ul class="list-unstyled">
+	  			<li>Play > Browse Community Servers > Favorites</li>
+	  			<li>Add A Server > 192.168.1.241:27015</li>
+	  			<li>click 'find games at this address'</li>
+	  		</ul>
+	  </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to image_tag("left4dead2-logo.jpg", alt: "left4dead2", class: "thumbnail"), '#' %>
+	  <div class="caption">
+	  	<h3>Left4Dead 2</h3>
+	  	<p>IP ADDRESS: 192.168.1.242</p>
+	  		<ul class="list-unstyled">
+	  			<li>Launch L4D2</li>
+	  			<li>Enable the console</li>
+	  			  <ul>
+	  			  	<li>Options> Keyboard/Mouse> Allow Developer Console > Enabled. Click Done.</li>
+	  			  </ul>
+	  			<li>Press the ~ key and open the console</li>
+	  			<li>type: 192.168.1.242 and hit enter.<li>
+	  		</ul>	  	
+	  </div>      
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to image_tag("starbound-logo.png", alt: "starbound", class: "thumbnail"), '#' %>
+	  <div class="caption">
+	  	<h3>Starbound</h3>
+	  	<p>IP ADDRESS: 192.168.1.245</p>
+	  		<ul class="list-unstyled">
+	  			<li>Launch Starbound</li>
+	  			<li>Click multiplayer</li>
+	  			<li>Server = 192.168.1.245</li>
+	  			<li>no user/pass is required<li>
+	  		</ul>	  	
+	  </div>      
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to image_tag("mcftbu-logo.png", alt: "Minecraft: Feed the Beast Unleashed", class: "thumbnail"), '#' %>
+	  <div class="caption">
+	  	<h3>Minecraft: Feed the Beast Unleashed</h3>
+	  	<p>IP ADDRESS: 192.168.1.243</p>
+	  		<ul class="list-unstyled">
+	  			<li>Download the installer for FTB below</li>
+	  			<li>Run the installer</li>
+	  				<ul>
+	  					<li>A console window will appear when the installer completes. Allow it to download the maps and textures.</li>
+	  				</ul>
+	  			<li>Scroll down the left page of the FTB launcher</li>
+	  			<li>Click the FTB Unleashed mod<li>
+	  			<li>Click launch in the lower right corner</li>
+	  			<li>Minecraft 1.5.2 will launch</li>
+	  				<ul>
+	  					<li>All the mods for FTB unleashed will be loaded</li>
+	  				</ul>
+	  			<li>Login and click multiplayer</li>
+	  			<li>Create a GAMEON FTB entry use IP address above</li>
+	  			<li>Click connect</li>
+	  		</ul>
+	  	<p><%= link_to "Download", 'http://www.creeperrepo.net/direct/FTB2/cbf28412ef3ab36443e551e59b42b2eb/launcher%5EFTB_Launcher.exe', class: "btn btn-large btn-primary" %> </p>
+	  </div>      
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-xs-6 col-md-3">
+	  <%= link_to image_tag("mumble-logo.png", alt: "Mumble", class: "thumbnail"), '#' %>
+	  <div class="caption">
+	  	<h3>Mumble</h3>
+	  	<p>IP ADDRESS: 192.168.1.244:64738</p>
+	  		<ul class="list-unstyled">
+	  			<li>Click the Get Mumble button</li>
+	  			<li>Download the client for your OS</li>
+	  			<li>Install and Setup Mumble</li>
+	  			<li>Mumble will ask for a connection</li>
+	  				<ul>
+	  					<li>Name new connection GAMEONLAN</li>
+	  					<li>IP address: 192.168.1.244</li>
+	  					<li>Port: 64738</li>
+	  					<li>Name: Enter your Name or Alias</li>
+	  					<li>Press OK then Connect</li>
+	  				</ul>
+	  			<li>There a pre-generated rooms to use</li>
+	  			<li>Announcements will show on the sidebar</li>
+	  		</ul>
+	  		<p><%= link_to "Get Mumble", 'http://www.mumble.com/mumble-download.php', class: "btn btn-large btn-primary" %> </p>
+	  </div>
+    </div>
+</div>
