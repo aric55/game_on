@@ -1,6 +1,6 @@
 GameOn::Application.routes.draw do
   root 'static_pages#home'
-  get "users/new"
+  resources :users
   match '/signup',     to: 'users#new',               via: 'get'
   match '/servers',    to: 'static_pages#servers',    via: 'get'
   match '/events',     to: 'static_pages#events',     via: 'get'
