@@ -7,9 +7,16 @@
       <div class="container">
         <h1>GameOn LAN Party</h1>
         <p>Come frag your friends, taunt your enemies or allies and have a good time playing games.</p>
-        <div class="center">
-        	<p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %></p>
-        </div>
+        <% if signed_in? %>
+          <p>The next GameOn LAN Party is scheduled for 27th Wintersday, 2370</p>
+          <div class="center">
+        	  <p><%= link_to "Register Now!", '#', class: "btn btn-large btn-primary" %></p>
+          </div>
+        <% else %>
+          <div class="center">
+            <p><%= link_to "Create Account!", signup_path, class: "btn btn-large btn-primary" %></p>
+          </div>
+        <% end %>
       </div>
     </div>
 
