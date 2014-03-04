@@ -16,4 +16,12 @@ namespace :db do
                    password_confirmation: password)
     end
   end
+
+  task populateadminonly: :environment do
+    admin = User.create!(name: "Admin User",
+                         email: "admin@gameon.com",
+                         password: "123home",
+                         password_confirmation: "123home",
+                         admin: true)
+  end
 end
