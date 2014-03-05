@@ -13,4 +13,8 @@ class StaticPagesController < ApplicationController
 
   def sponsors
   end
+
+  def admin
+    redirect_to(root_url) unless current_user.try(:admin?)
+  end
 end

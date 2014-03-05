@@ -1,0 +1,17 @@
+<% provide(:title, 'All Events') %>
+<h1>All Events</h1>
+
+<div class="table-responsive divcenter span4">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Attendance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @events %>
+    </tbody>
+  </table>
+</div>

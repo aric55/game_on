@@ -1,0 +1,18 @@
+<% provide(:title, 'Create Event') %>
+<%= render 'layouts/admin' %>
+<h1>Create Event</h1>
+
+<div class="row">
+  <div class="divcenter">
+    <%= form_for(@event) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :dateheld, "Date of Event" %>
+      <%= f.date_field :dateheld %>
+
+      <%= f.submit "Create Event", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

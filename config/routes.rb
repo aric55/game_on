@@ -1,12 +1,14 @@
 GameOn::Application.routes.draw do
+  get "events/new"
   root 'static_pages#home'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :events
   match '/signup',     to: 'users#new',               via: 'get'
   match '/signin',     to: 'sessions#new',            via: 'get'
   match '/signout',    to: 'sessions#destroy',        via: 'delete'
+  match '/admin',      to: 'static_pages#admin',      via: 'get'
   match '/servers',    to: 'static_pages#servers',    via: 'get'
-  match '/events',     to: 'static_pages#events',     via: 'get'
   match '/staff',      to: 'static_pages#staff',      via: 'get'
   match '/sponsors',   to: 'static_pages#sponsors',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
